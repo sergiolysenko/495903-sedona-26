@@ -8,13 +8,13 @@
   	<header>
   		<nav>
   			<a href="index.html">
-    	  		<img src="img/logo.svg" width="50" height="50" alt="логотип"><!--Логотип лучше потом засунуть между списка через css или лучше сразу поместить его в список?-->
+    	  		<img src="img/logo.svg" width="50" height="50" alt="логотип">
     	  	</a>
   			<ul>
   				<li><a href="info.html">Информация</a></li>
   				<li><a href="photo.html">Фото и видео</a></li>
   				<li><a href="map.html">Карта штата</a></li>
-  				<li><a href="hotels.html">Гостинницы</a></li>
+  				<li><a href="hotels.html">Гостиницы</a></li>
   			</ul>
   		</nav>
   	</header>
@@ -27,8 +27,7 @@
   		</section>
   		<section>
   			<h2>Седона - небольшой городок в аризоне, заслуживающий большего!</h2>
-  			<p>
-  				<!--Лучше объеденить в один p как сейчас как один смысловой блок? или список в отдельный p а предложение в отдельный и все в div?-->
+  			<div>
   				<span>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</span>
 	  			<ul>
 	  				<li>
@@ -69,7 +68,7 @@
 	  					<span>Большинство едет в гранд каньон и толпится там</span>
 	  				</li>
 	  			</ul>
-  			</p>
+  			</div>
   		</section>
   		<section>
   			<h2>Жилье, еда, сувениры</h2>
@@ -92,15 +91,40 @@
   		</section>
   		<section>
   			<p>
-  				<span>Заинтересовались?</span>
+  				<span>Заинтересовались?</span><br>
 	  			<span>Укажите предполагаемые даты поездки,<br>
 	  			и мы покажем вам лучшие предложения гостиниц в седоне</span>
   			</p>
-  			<fieldset>
-				<legend><h2>Поиск гостиницы в Седоне</h2></legend>
-  				<form>
-  				</form>
-  			</fieldset>
+  			<!-- Доделать после лекции про формы --
+  			<form>
+  				<fieldset>
+					<legend>
+						<h2>Поиск гостиницы в Седоне</h2>
+					</legend>
+
+					<label for="arrival">Дата заезда:</label>
+					<input type="date" id="arrival" name="arrival">
+
+					<label for="departure">Дата выезда:</label>
+					<input type="date" id="departure" name="departure">
+
+					<label for="adult">Взрослые:</label>
+					<div>
+						<button type="button">-</button>
+						<input type="text" id="adult" name="adult" value="1" data-min="1" inputmode="numeric">
+						<button type="button">+</button>
+					</div>
+					
+					<label for="adult">Дети:</label>
+					<div>
+						<button type="button">-</button>
+						<input type="text" id="child" name="child" value="1" data-min="1" inputmode="numeric">
+						<button type="button">+</button>
+					</div>
+					<button type="button">Найти</button>	
+  				</fieldset>
+  			</form>
+  			-->
   		</section>
    	</main>
    	<footer>
