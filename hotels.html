@@ -3,28 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - поиск гостиниц</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
-  	<header>
-  		<nav>
-  			<a href="index.html">
-    	  		<img src="img/logo_header.png" width="140" height="72" alt="логотип">
-    	  </a>
-  			<ul>
-  				<li><a href="info.html">Информация</a></li>
-  				<li><a href="photo.html">Фото и видео</a></li>
-  				<li><a href="map.html">Карта штата</a></li>
-  				<li><a>Гостиницы</a></li>
-  			</ul>
-  		</nav>
+  <body class="page__hotels">
+  	<header class="header">
+  		<nav class="header__nav">
+          <a class="header__logo-link" href="index.html">
+            <img class="header__logo-img" src="img/logo_header.png" width="140" height="72" alt="логотип города Седона">
+          </a>
+        <ul class="header__nav-list">
+            <li class="nav__item"><a href="info.html">Информация</a></li>
+            <li class="nav__item"><a href="photo.html">Фото и видео</a></li>
+            <li class="nav__item"><a href="map.html">Карта штата</a></li>
+            <li class="nav__item"><a>Гостиницы</a></li>
+        </ul>
+      </nav>
   	</header>
   	<main>
-      <h1>Поиск гостиниц</h1>
-      <!-- Доделать после лекции про формы --
-      <section>
-        <h2>Фильтры</h2>
-        <form>
-          <fieldset>
+      <h1 class="visually-hidden">Поиск гостиниц</h1>
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтры</h2>
+        <form method="post">
+          <fieldset class="filter__comfort">
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
@@ -41,7 +43,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter__type">
             <legend>Тип жилья:</legend>
             <ul>
               <li>
@@ -58,91 +60,88 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter__price">
             <legend>Стоимость в сутки (р):</legend>
           </fieldset>
         </form>
+        <button type="button">Показать</button>
       </section>
-      -->  
   		<section>
-        <h2>Найденные госиницы</h2>
-        <div>
-          <span>Найдено: 3</span>
-          <div>
-            <h3>Сортировка</h3>
-            <ul>
-              <li><button type="button">По цене</button></li>
-              <li><button type="button">По типу</button></li>
-              <li><button type="button">По рейтингу</button></li>
-              <li><button type="button">up</button></li>
-              <li><button type="button">down</button></li>
+        <h2><span class="visually-hidden">Найденные госиницы</span> Найдено: 3</h2>
+        <div class="sorting">
+            <h3 class="sorting__header">Сортировка</h3>
+            <ul class="sorting__by">
+              <li class="sorting_item"><button type="button">По цене</button></li>
+              <li class="sorting_item"><button type="button">По типу</button></li>
+              <li class="sorting_item"><button type="button">По рейтингу</button></li>
+              <li class="sorting_item sorting__up"><button type="button">up</button></li>
+              <li class="sorting_item sorting__down"><button type="button">down</button></li>
             </ul>
-          </div>
         </div>
-        <ul>
-          <li>
-            <h3><a href="#">Amara resort & spa</a></h3>
-            <p>
-              <img src="img/four_star.png" width="90" height="17" alt="четыре звезды">
-              <span>Рейтинг: 8,5</span>
-            </p>
-            <p>       
-              <a href="#"><img src="img/amara.jpg" width="135" height="90" alt="фото гостиницы amara resort"></a>
-            </p>
-            <p>
-              Гостиница <span>от 4000 р.</span>
-            </p>
-            <p>
-              <a href="#">Подробнее</a>
-              <a href="#">Забронировать</a>
-            </p>
-          </li>
-          <li>
-            <h3><a href="#">Desert quail inn</a></h3>
-            <p>
-              <img src="img/three_star.png" width="65" height="17" alt="три звезды">
-              <span>Рейтинг: 8,9</span>
-            </p>
-            <p>        
-              <a href="#"><img src="img/desert_quail.jpg" width="135" height="90" alt="фото гостиницы Desert quail inn"></a>
-            <p>
-              Мотель <span>от 3000 р.</span>
-            </p>
-            <p>
-              <a href="#">Подробнее</a>
-              <a href="#">Забронировать</a>
-            </p>
-          </li>
-          <li>
-            <h3><a href="#">Villas at poco diablo</a></h3>
-            <p>
-              <img src="img/two_star.png" width="41" height="17" alt="две звезды">
-              <span>Рейтинг: 9,2</span>
-            </p>  
-            <p>
-              <a href="#"><img src="img/Villas_diablo.jpg" width="135" height="90" alt="фото гостиницы Villas at poco diablo"></a>
-            </p>      
-            <p>
-              Апартаменты <span>от 3000 р.</span>
-            </p>
-            <p>
-              <a href="#">Подробнее</a>
-              <a href="#">Забронировать</a>
-            </p>
-          </li>
-        </ul>     
+        <div class="hotels__field">
+          <ul class="hotels__list">
+            <li class="hotel">
+              <h3 class="hotel__header"><a href="#">Amara resort & spa</a></h3>
+              <p class="raiting__group">
+                <img src="img/four_star.png" width="90" height="17" alt="четыре звезды" class="stars">
+                <span class="raiting">Рейтинг: 8,5</span>
+              </p>
+              <p class="hotel__img">       
+                <a href="#"><img src="img/amara.jpg" width="135" height="90" alt="фото гостиницы amara resort"></a>
+              </p>
+              <p class="description">
+                Гостиница <span class="description__price">от 4000 р.</span>
+              </p>
+              <p>
+                <a href="#" class="hotel__details">Подробнее</a>
+                <a href="#" class="hotel__book">Забронировать</a>
+              </p>
+            </li>
+            <li class="hotel">
+              <h3 class="hotel__header"><a href="#">Desert quail inn</a></h3>
+              <p class="raiting__group">
+                <img src="img/three_star.png" width="65" height="17" alt="три звезды" class="stars">
+                <span class="raiting">Рейтинг: 8,9</span>
+              </p>
+              <p class="hotel__img">        
+                <a href="#"><img src="img/desert_quail.jpg" width="135" height="90" alt="фото гостиницы Desert quail inn"></a>
+              <p class="description">
+                Мотель <span class="description__price">от 3000 р.</span>
+              </p>
+              <p>
+                <a href="#" class="hotel__details">Подробнее</a>
+                <a href="#" class="hotel__book">Забронировать</a>
+              </p>
+            </li>
+            <li class="hotel__item">
+              <h3 class="hotel__header"><a href="#">Villas at poco diablo</a></h3>
+              <p class="raiting__group">
+                <img src="img/two_star.png" width="41" height="17" alt="две звезды" class="stars">
+                <span class="raiting">Рейтинг: 9,2</span>
+              </p>  
+              <p class="hotel__img">
+                <a href="#"><img src="img/Villas_diablo.jpg" width="135" height="90" alt="фото гостиницы Villas at poco diablo"></a>
+              </p>      
+              <p class="description">
+                Апартаменты <span class="description__price">от 3000 р.</span>
+              </p>
+              <p>
+                <a href="#" class="hotel__details">Подробнее</a>
+                <a href="#" class="hotel__book">Забронировать</a>
+              </p>
+            </li>
+          </ul>
+        </div>     
       </section>
    	</main>
-   	<footer>
-   		<p>#visitsedona</p>
-   		<div>
-	   		<ul>
-	   			<li><a href="#">twitter</a></li>
-	   			<li><a href="#">facebook</a></li>
-	   			<li><a href="#">youtube</a></li>
-	   		</ul>
-		</div>
-		<a href="htmlacademy.ru">htmlacademy</a>
-   	</footer>
+   	<footer class="footer">
+      <p class="footer__tag">#visitsedona</p>
+        <ul class="footer__socials">
+          <li class="twitter"><a href="#">twitter</a></li>
+          <li class="fb"><a href="#">facebook</a></li>
+          <li class="youtube"><a href="#">youtube</a></li>
+        </ul>
+      <a href="htmlacademy.ru">htmlacademy</a>
+    </footer>
   </body>
 </html>

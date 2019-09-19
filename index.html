@@ -3,141 +3,150 @@
   <head>
     <meta charset="utf-8">
     <title>Седона - неольшой городок в Аризоне</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page__index">
   	<header class="header">
-  		<nav class="site-header__nav">
+  		<nav class="header__nav">
   			<a class="header__logo-link" href="index.html">
-    	  		<img class="header__logo-img"	src="img/logo_header.png" width="140" height="72" alt="логотип">
+    	  		<img class="header__logo-img"	src="img/logo_header.png" width="140" height="72" alt="логотип города Седона">
     	  	</a>
-  			<ul>
-  				<li class="header__item"><a class="header__link" href="info.html">Информация</a></li>
-  				<li class="header__item"><a class="header__link" href="photo.html">Фото и видео</a></li>
-  				<li class="header__item"><a class="header__link" href="map.html">Карта штата</a></li>
-  				<li class="header__item"><a class="header__link" href="hotels.html">Гостиницы</a></li>
+  			<ul class="header__nav-list">
+  				<li class="nav__item"><a href="info.html">Информация</a></li>
+  				<li class="nav__item"><a href="photo.html">Фото и видео</a></li>
+  				<li class="nav__item"><a href="map.html">Карта штата</a></li>
+  				<li class="nav__item"><a href="hotels.html">Гостиницы</a></li>
   			</ul>
   		</nav>
   	</header>
   	<main class="main">
-  		<h1 class="main__h1">Sedona</h1>
+  		<h1 class="visually-hidden">Sedona</h1>
   		<section class="big-logo">
-  			<h2>большой логотип</h2>
+  			<h2 class="visually-hidden">Логотип и слоган города</h2>
   			<p>
   				<img class="big-logo__img" src="img/welcome.svg" width="534" height="411" alt="welcome to the gorgeous Sedona">
   			</p>
   		</section>
-  		<section>
+  		<section class="advantages">
   			<h2>Седона - небольшой городок в аризоне, заслуживающий большего!</h2>
+  			<p class="">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
   			<div>
-  				<span>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</span>
-	  			<ul>
-	  				<li>
+	  			<ul class="advantages__list">
+	  				<li class="advantage__item advantage__img">
 	  					<h3>Настоящий городок</h3>
 	  					<p>
-	  						<span>- №1 -</span>
+	  						<span>- №1 -</span><br>
 	  						<span>Седона не аттракцион для туристов, там течёт своя жизнь</span>
 	  					</p>
 	  					<p>
-	  						<img src="img/city.jpg" width="800" height="401" alt="фотография города">
+	  						<img src="img/city.jpg" width="800" height="401" alt="фотография города Седона">
 	  					</p>
 	  				</li>
-	  				<li>
+	  				<li class="advantage__item advantage__img">
 	  					<h3>Там есть мост дьявола</h3>
 	  					<p>
-	  						<span>- №2 -</span>
+	  						<span>- №2 -</span><br>
 	  						<span>Да, по нему можно пройти! Если конечно вы осмелитесь</span>
 	  					</p>
 	  					<p>
-	  						<img src="img/bridge.jpg" width="800" height="400" alt="мост дьявола">
+	  						<img src="img/bridge.jpg" width="800" height="400" alt=" фотография моста дьявола">
 	  					</p>
 	  				</li>
-	  				<li>
+	  				<li class="advantage__item">
 	  					<h3>Небольшая площадь</h3>
 	  					<p>
-	  						<span>- №3 -</span>
+	  						<span>- №3 -</span><br>
 	  						<span>Все достопримечательности находятся очень близко</span>
 	  					</p>
 	  				</li>
-	  				<li>
+	  				<li class="advantage__item">
 	  					<h3>Красивая дорога</h3>
-	  					<span>- №4 -</span>
-	  					<span>Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
+	  					<p>
+		  					<span>- №4 -</span><br>
+		  					<span>Ехать в Седону из Лас-Вегаса совсем не скучно!</span>
+	  					</p>
 	  				</li>
-	  				<li>
+	  				<li class="advantage__item">
 	  					<h3>Мало туристов</h3>
-						<span>- №5 -</span>
-	  					<span>Большинство едет в гранд каньон и толпится там</span>
+	  					<p>
+							<span>- №5 -</span><br>
+		  					<span>Большинство едет в гранд каньон и толпится там</span>
+		  				</p>
 	  				</li>
 	  			</ul>
   			</div>
   		</section>
-  		<section>
-  			<h2>Жилье, еда, сувениры</h2>
+  		<section class="todo">
+  			<h2 class="visually-hidden">Жилье, еда, сувениры</h2>
   			<div>
-  				<ul>
-  					<li>
+  				<ul class="todo__list">
+  					<li class="todo__item todo__house">
   						<h3>Жилье</h3>
   						<p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
   					</li>
-  					<li>
+  					<li class="todo__item todo__food">
   						<h3>Еда</h3>
   						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
   					</li>
-  					<li>
+  					<li class="todo__item todo__souvenir">
   						<h3>Сувениры</h3>
   						<p>Не только китайского, но и местного производства!</p>
   					</li>
   				</ul>
   			</div>
   		</section>
-  		<section>
-  			<p>
-  				<span>Заинтересовались?</span><br>
-	  			<span>Укажите предполагаемые даты поездки,<br>
+  		<section class="booking">
+  			<h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+  			<p class="booking__info">
+  				<span class="info__question">Заинтересовались?</span><br>
+	  			<span class="info__text">Укажите предполагаемые даты поездки,<br>
 	  			и мы покажем вам лучшие предложения гостиниц в седоне</span>
   			</p>
-  			<!-- Доделать после лекции про формы --
-  			<form>
+  			<form method="get" class="booking__field">
   				<fieldset>
-					<legend>
-						<h2>Поиск гостиницы в Седоне</h2>
-					</legend>
+					<legend class="booking__head">Поиск гостиницы в Седоне</legend>
 
-					<label for="arrival">Дата заезда:</label>
-					<input type="date" id="arrival" name="arrival">
-
-					<label for="departure">Дата выезда:</label>
-					<input type="date" id="departure" name="departure">
-
-					<label for="adult">Взрослые:</label>
-					<div>
-						<button type="button">-</button>
-						<input type="text" id="adult" name="adult" value="1" data-min="1" inputmode="numeric">
-						<button type="button">+</button>
+					<div class="form__arrival">
+						<label for="arrival">Дата заезда:</label>
+						<input type="text" class="form" id="arrival" name="arrival">
 					</div>
-					
-					<label for="adult">Дети:</label>
-					<div>
-						<button type="button">-</button>
-						<input type="text" id="child" name="child" value="1" data-min="1" inputmode="numeric">
-						<button type="button">+</button>
+
+					<div class="form__departure">
+						<label for="departure">Дата выезда:</label>
+						<input type="text" id="departure" name="departure">
 					</div>
-					<button type="button">Найти</button>	
+
+					<div class="form__adults">
+						<label for="adult">Взрослые:</label>
+						<div>
+							<button type="button">-</button>
+							<input type="text" id="adult" name="adult" value="1" data-min="1" inputmode="numeric">
+							<button type="button">+</button>
+						</div>
+					</div>
+					<div class="form__child"> 
+						<label for="child">Дети:</label>
+						<div>
+							<button type="button">-</button>
+							<input type="text" id="child" name="child" value="1" data-min="1" inputmode="numeric">
+							<button type="button">+</button>
+						</div>
+					</div>
+					<a href="#" class="form__find">Найти</a>	
   				</fieldset>
   			</form>
-  			-->
   		</section>
    	</main>
-   	<footer>
-   		<p>#visitsedona</p>
-   		<div>
-	   		<ul>
-	   			<li><a href="#">twitter</a></li>
-	   			<li><a href="#">facebook</a></li>
-	   			<li><a href="#">youtube</a></li>
-	   		</ul>
-		</div>
-		<a href="htmlacademy.ru">htmlacademy</a>
-   	</footer>
+    <footer class="footer">
+      <p class="footer__tag">#visitsedona</p>
+        <ul class="footer__socials">
+          <li class="twitter"><a href="#">twitter</a></li>
+          <li class="fb"><a href="#">facebook</a></li>
+          <li class="youtube"><a href="#">youtube</a></li>
+        </ul>
+      <a href="htmlacademy.ru">htmlacademy</a>
+    </footer>
   </body>
 </html>

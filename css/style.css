@@ -1,0 +1,131 @@
+body {
+	margin: 0 40px 0 40px;
+	padding: 0;
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-size: 14px;
+	line-height: 21px;
+	text-transform: uppercase;
+	background-color: #ffffff;
+}
+a {
+	text-decoration: none;
+  
+}
+.header__nav-list li {
+	list-style: none;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+}
+.header__nav-list a {
+	color: #000000;
+}
+.header__nav-list a:hover,
+.header__nav-list a:focus {
+	color: #81b3d2;  
+}
+.header__nav-list a:active {
+	color: #eeeeee;  
+}
+.big-logo {
+	background-color: #dceaf3;
+	background-image: 
+	url("../img/bottom_cover.svg"),
+	url("../img/background_index.jpg");
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom center,	top center;
+	text-align: center;
+}
+.advantages__list {
+	list-style: none;
+	text-align: center;
+}
+.advantages h2, h3 {
+	font-size: 21px;
+	font-style: bold;
+}
+.advantage h2 {
+	line-height: 26px;
+}
+.advantages p {
+	color: #333333;
+}
+.advantage__img * {
+	color: #ffffff; 
+}
+
+.advantage__item:not(.advantage__img) {
+	background-color: #eeeeee;
+}
+.advantage__img {
+	background-color: #81b3d2;
+}
+.todo__list {
+	list-style: none;
+	text-align: center;
+}
+.todo__item h3 {
+	font-size: 21px;
+	font-weight: bold;
+}
+.todo__item p {
+	color: #333333;
+}
+.todo__house::before {
+	content: "";
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	background-image: url("../img/house.svg");
+	background-repeat: no-repeat;
+}
+.todo__food::before {
+	content: "";
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	background-image: url("../img/food.svg");
+	background-repeat: no-repeat;
+}
+.todo__souvenir::before {
+	content: "";
+	position: absolute;
+	width: 72px;
+	height: 72px;
+	background-image: url("../img/souvenir.svg");
+	background-repeat: no-repeat;
+}
+.booking__info {
+	text-align: center;
+}
+.info__question {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: bold;
+}
+.info__text {
+	line-height: 24px;
+	color: #333333;
+}
+.booking__head {
+	box-sizing: border-box;
+	width: 568px;
+	height: 86px;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #766357;
+	text-align: center;
+	padding-top: 30px;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
