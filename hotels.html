@@ -17,18 +17,19 @@
             <li class="nav__item"><a href="info.html">Информация</a></li>
             <li class="nav__item"><a href="photo.html">Фото и видео</a></li>
             <li class="nav__item"><a href="map.html">Карта штата</a></li>
-            <li class="nav__item"><a>Гостиницы</a></li>
+            <li class="nav__item"><a href="#" onclick="return false;" class="active">Гостиницы</a></li>
         </ul>
       </nav>
   	</header>
   	<main>
       <h1 class="visually-hidden">Поиск гостиниц</h1>
+<!--Секция с фильтрами-->       
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
         <form method="post">
-          <fieldset class="filter__comfort">
+          <fieldset class="filter__comfort comfort__type">
             <legend>Инфраструктура:</legend>
-            <ul>
+            <ul class="comfort__list">
               <li>
                 <input type="checkbox" id="pool" name="pool">
                 <label for="pool">Бассейн</label>
@@ -43,7 +44,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter__type">
+          <fieldset class="filter__type comfort__type">
             <legend>Тип жилья:</legend>
             <ul>
               <li>
@@ -62,86 +63,90 @@
           </fieldset>
           <fieldset class="filter__price">
             <legend>Стоимость в сутки (р):</legend>
+            <button type="button">Показать</button>
           </fieldset>
-        </form>
-        <button type="button">Показать</button>
+        </form>      
       </section>
-  		<section>
+<!--Sorting section -->        
+  		<section class="sorting__field">
         <h2><span class="visually-hidden">Найденные госиницы</span> Найдено: 3</h2>
         <div class="sorting">
-            <h3 class="sorting__header">Сортировка</h3>
+            <h3 class="sorting__header">Сортировка:</h3>
             <ul class="sorting__by">
-              <li class="sorting_item"><button type="button">По цене</button></li>
-              <li class="sorting_item"><button type="button">По типу</button></li>
-              <li class="sorting_item"><button type="button">По рейтингу</button></li>
-              <li class="sorting_item sorting__up"><button type="button">up</button></li>
-              <li class="sorting_item sorting__down"><button type="button">down</button></li>
+              <li><button class="sorting__button" type="button">По цене</button></li>
+              <li><button class="sorting__button" type="button">По типу</button></li>
+              <li><button class="sorting__button" type="button">По рейтингу</button></li>
             </ul>
         </div>
-        <div class="hotels__field">
-          <ul class="hotels__list">
-            <li class="hotel">
-              <h3 class="hotel__header"><a href="#">Amara resort & spa</a></h3>
-              <p class="raiting__group">
-                <img src="img/four_star.png" width="90" height="17" alt="четыре звезды" class="stars">
-                <span class="raiting">Рейтинг: 8,5</span>
-              </p>
-              <p class="hotel__img">       
-                <a href="#"><img src="img/amara.jpg" width="135" height="90" alt="фото гостиницы amara resort"></a>
-              </p>
-              <p class="description">
-                Гостиница <span class="description__price">от 4000 р.</span>
-              </p>
-              <p>
-                <a href="#" class="hotel__details">Подробнее</a>
-                <a href="#" class="hotel__book">Забронировать</a>
-              </p>
-            </li>
-            <li class="hotel">
-              <h3 class="hotel__header"><a href="#">Desert quail inn</a></h3>
-              <p class="raiting__group">
-                <img src="img/three_star.png" width="65" height="17" alt="три звезды" class="stars">
-                <span class="raiting">Рейтинг: 8,9</span>
-              </p>
-              <p class="hotel__img">        
-                <a href="#"><img src="img/desert_quail.jpg" width="135" height="90" alt="фото гостиницы Desert quail inn"></a>
-              <p class="description">
-                Мотель <span class="description__price">от 3000 р.</span>
-              </p>
-              <p>
-                <a href="#" class="hotel__details">Подробнее</a>
-                <a href="#" class="hotel__book">Забронировать</a>
-              </p>
-            </li>
-            <li class="hotel__item">
-              <h3 class="hotel__header"><a href="#">Villas at poco diablo</a></h3>
-              <p class="raiting__group">
-                <img src="img/two_star.png" width="41" height="17" alt="две звезды" class="stars">
-                <span class="raiting">Рейтинг: 9,2</span>
-              </p>  
-              <p class="hotel__img">
-                <a href="#"><img src="img/Villas_diablo.jpg" width="135" height="90" alt="фото гостиницы Villas at poco diablo"></a>
-              </p>      
-              <p class="description">
-                Апартаменты <span class="description__price">от 3000 р.</span>
-              </p>
-              <p>
-                <a href="#" class="hotel__details">Подробнее</a>
-                <a href="#" class="hotel__book">Забронировать</a>
-              </p>
-            </li>
-          </ul>
-        </div>     
+        <div class="up__down">
+          <button class="sorting__up" type="button">up</button>
+          <button class="sorting__down" type="button">down</button>
+        </div>
       </section>
+<!--Секция с Отелями-->        
+      <section class="hotels__field">
+        <ul class="hotels__list">
+          <li class="hotel">
+            <h3><a class="hotel__header" href="#">Amara resort & spa</a></h3>
+            <p class="raiting__group">
+              <img src="img/four_star.png" width="90" height="17" alt="четыре звезды" class="stars">
+              <span class="raiting">Рейтинг: 8,5</span>
+            </p>
+            <p class="hotel__img">       
+              <a href="#"><img src="img/amara.jpg" width="135" height="90" alt="фото гостиницы amara resort"></a>
+            </p>
+            <p class="description">
+              Гостиница <span class="description__price">от 4000 р.</span>
+            </p>
+            <p>
+              <a href="#" class="hotel__details">Подробнее</a>
+              <a href="#" class="hotel__book">Забронировать</a>
+            </p>
+          </li>
+          <li class="hotel">
+            <h3><a class="hotel__header" href="#">Desert quail inn</a></h3>
+            <p class="raiting__group">
+              <img src="img/three_star.png" width="65" height="17" alt="три звезды" class="stars">
+              <span class="raiting">Рейтинг: 8,9</span>
+            </p>
+            <p class="hotel__img">        
+              <a href="#"><img src="img/desert_quail.jpg" width="135" height="90" alt="фото гостиницы Desert quail inn"></a>
+            <p class="description">
+              Мотель <span class="description__price">от 3000 р.</span>
+            </p>
+            <p>
+              <a href="#" class="hotel__details">Подробнее</a>
+              <a href="#" class="hotel__book">Забронировать</a>
+            </p>
+          </li>
+          <li class="hotel">
+            <h3><a class="hotel__header" href="#">Villas at poco diablo</a></h3>
+            <p class="raiting__group">
+              <img src="img/two_star.png" width="41" height="17" alt="две звезды" class="stars">
+              <span class="raiting">Рейтинг: 9,2</span>
+            </p>  
+            <p class="hotel__img">
+              <a href="#"><img src="img/Villas_diablo.jpg" width="135" height="90" alt="фото гостиницы Villas at poco diablo"></a>
+            </p>      
+            <p class="description">
+              Апартаменты <span class="description__price">от 3000 р.</span>
+            </p>
+            <p>
+              <a href="#" class="hotel__details">Подробнее</a>
+              <a href="#" class="hotel__book">Забронировать</a>
+            </p>
+          </li>
+        </ul>  
+    </section>
    	</main>
    	<footer class="footer">
       <p class="footer__tag">#visitsedona</p>
         <ul class="footer__socials">
-          <li class="twitter"><a href="#">twitter</a></li>
-          <li class="fb"><a href="#">facebook</a></li>
-          <li class="youtube"><a href="#">youtube</a></li>
+          <li><a class="social__icon twitter" href="#" aria-label="twitter"></a></li>
+          <li><a class="social__icon facebook" href="#" aria-label="facebook"></a></li>
+          <li><a class="social__icon youtube" href="#" aria-label="youtube"></a></li>
         </ul>
-      <a href="htmlacademy.ru">htmlacademy</a>
+      <a class="htmlacademy" href="htmlacademy.ru" aria-lable="htmlacademy"></a>
     </footer>
   </body>
 </html>
