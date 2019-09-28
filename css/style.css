@@ -9,6 +9,7 @@ body
     padding: 0;
 
     text-transform: uppercase;
+
     background-color: #fff;
     box-shadow: -10px 0 15px rgba(0,0,0,.18),
     10px 0 15px rgba(0,0,0,.18);
@@ -110,9 +111,10 @@ a
     background-position: bottom, 50% 20%;
     background-size: 1500px 57px, cover;
 }
-.big-logo__img {
-	max-width: 100%;
-	margin: auto;
+.big-logo__img
+{
+    max-width: 100%;
+    margin: auto;
 }
 /*  ----- Section Advantages -----  */
 .advantages
@@ -309,6 +311,9 @@ ul .advantage__blue
 .booking__label
 {
     font: inherit;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
 
     box-sizing: border-box;
     width: 100%;
@@ -318,18 +323,13 @@ ul .advantage__blue
     padding: 0;
     padding-top: 7px;
 
+    text-transform: uppercase;
+
     color: #fff;
     border: none;
     background-color: #766357;
 }
-.booking__field h3
-{
-    font-size: 21px;
-    line-height: 26px;
 
-    text-align: center;
-    text-transform: uppercase;
-}
 .booking__label:hover
 {
     background-color: #604e43;
@@ -408,8 +408,10 @@ ul .advantage__blue
     position: absolute;
     top: 6px;
     right: 10px;
-	border: none;
-	background: none;
+
+    border: none;
+    background: none;
+
     fill: #a9a9a9;
 }
 .calendar:hover,
