@@ -33,19 +33,17 @@
             <h3>Инфраструктура:</h3>
             <ul class="comfort__list">
               <li>
-                <label for="pool">
-                <input class="box" type="checkbox" id="pool" name="pool">
+                <label class="filter__checkbox" for="pool">
+                <input class="visually-hidden" type="checkbox" id="pool" name="pool"><span class="checkbox__indicator"></span>
                 Бассейн</label>
               </li>
               <li class="filter__parking">
-                <label for="parking">
-                <input type="checkbox" id="parking" name="parking">
-                <span></span>Парковка</label>
+                <label class="filter__checkbox" for="parking">
+                <input class="visually-hidden" type="checkbox" id="parking" name="parking"><span class="checkbox__indicator"></span>Парковка</label>
               </li>
               <li class="filter__wifi">
-                <label for="wifi">
-                <input type="checkbox" id="wifi" name="wifi">
-                <span></span>Wi-fi</label>
+                <label class="filter__checkbox" for="wifi">
+                <input class="visually-hidden" type="checkbox" id="wifi" name="wifi"><span class="checkbox__indicator"></span>Wi-fi</label>
               </li>
             </ul>
           </fieldset>
@@ -53,19 +51,22 @@
             <h3>Тип жилья:</h3>
             <ul>
               <li>
-                <input type="checkbox" id="hotel" name="hotel">
-                <span></span>
-                <label for="hotel">Гостиница</label>
+                <label class="filter__checkbox" for="hotel">
+                <input class="visually-hidden" type="checkbox" id="hotel" name="hotel">
+                <span class="checkbox__indicator"></span>
+                Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" id="motel" name="motel">
-                <span></span>
-                <label for="motel">Мотель</label>
+                <label class="filter__checkbox" for="motel">
+                <input class="visually-hidden" type="checkbox" id="motel" name="motel">
+                <span class="checkbox__indicator"></span>
+                Мотель</label>
               </li>
               <li>
-                <input type="checkbox" id="apartment" name="apartment">
-                <span></span>
-                <label for="apartment">Апартаменты</label>
+                <label class="filter__checkbox" for="apartment">
+                <input class="visually-hidden" type="checkbox" id="apartment" name="apartment">
+                <span class="checkbox__indicator"></span>
+                Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -94,9 +95,15 @@
         <div class="sorting">
             <h3 class="sorting__header">Сортировка:</h3>
             <ul class="sorting__by">
-              <li><button class="sorting__button" type="button">По цене</button></li>
-              <li><button class="sorting__button" type="button">По типу</button></li>
-              <li><button class="sorting__button" type="button">По рейтингу</button></li>
+              <li>
+                <input class="visually-hidden" type="radio" id="by__price" name="sorting__by" value="by__price"><label for="by__price">По цене</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="radio" id="by__type" name="sorting__by" value="by__type"><label for="by__type">По типу</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="radio" id="by__rating" name="sorting__by" value="by__rating"><label for="by__rating">По рейтингу</label>
+              </li>
             </ul>
         </div>
         <div class="sorting__arrows">
