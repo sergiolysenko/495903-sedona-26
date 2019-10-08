@@ -4,7 +4,7 @@ body
     font-size: 14px;
     line-height: 21px;
 
-    max-width: 1200px; /* В макете отступы. Лучше задать так? или padding или margin? */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0;
 
@@ -32,10 +32,7 @@ a
 {
     text-decoration: none;
 }
-.page__index
-{
-    
-}
+
 .page__index p
 {
     color: #333;
@@ -49,8 +46,9 @@ a
     width: 140px;
     margin-left: -70px;
 }
-.header__logo-link:focus {
-    box-shadow: 0 0 0 2px rgba(30, 38, 139, 0.5);
+.header__logo-link:focus
+{
+    box-shadow: 0 0 0 2px rgba(30, 38, 139, .5);
 }
 .header__nav-list
 {
@@ -279,14 +277,17 @@ ul .advantage__blue
 .booking
 {
     width: 100%;
-    background-color: #ffffff;
+
+    background-color: #fff;
 }
 .booking__info
 {
     margin-bottom: 45px;
     padding-top: 20px;
+
     text-align: center;
-    background-color: #ffffff;
+
+    background-color: #fff;
 }
 .booking__info h3
 {
@@ -302,27 +303,28 @@ ul .advantage__blue
 }
 .booking__section
 {
+    position: relative;
+
     max-width: 568px;
     margin: 0 auto;
     padding: 0;
 
-    position: relative;
     background-color: #fff;
 }
-.booking__label-wrap {
-    width: 568px;
+.booking__label-wrap
+{
+    max-width: 568px;
     margin: 0 auto;
 }
 .booking__label
 {
-
     font: inherit;
     font-size: 21px;
-    line-height: 26px;
     font-weight: bold;
-    
+    line-height: 26px;
+
     box-sizing: border-box;
-    width: 568px;
+    width: 100%;
     min-height: 87px;
     margin: 0;
     padding: 0;
@@ -360,20 +362,25 @@ ul .advantage__blue
 }
 .form__field
 {
-    display: flex;
     position: absolute;
+
+    display: flex;
+
     box-sizing: border-box;
     width: 100%;
     margin: 0 auto;
     padding: 0;
     padding-top: 55px;
-    padding-left: 55px;
     padding-right: 55px;
-    background-color: #ffffff;
+    padding-left: 55px;
+
     border: none;
+    background-color: #fff;
+
     flex-flow: column;
 }
-.form__field__hide {
+.form__field__hide
+{
     display: none;
 }
 .form__field label
@@ -446,6 +453,7 @@ ul .advantage__blue
 .minus__plus
 {
     position: relative;
+
     box-sizing: border-box;
     width: 38px;
     height: 38px;
@@ -455,28 +463,34 @@ ul .advantage__blue
     border: none;
     background-color: #f2f2f2;
 }
-.minus::after 
+.minus::after
 {
-    content: "";
     position: absolute;
     top: 18px;
     left: 13px;
+
     width: 12px;
     height: 3px;
+
+    content: '';
+
     background-color: #a9a9a9;
 }
 .plus::after,
-.plus::before 
+.plus::before
 {
-    content: "";
     position: absolute;
     top: 18px;
     left: 13px;
+
     width: 11px;
     height: 3px;
+
+    content: '';
+
     background-color: #a9a9a9;
 }
-.plus::before 
+.plus::before
 {
     transform: rotate(90deg);
 }
@@ -485,12 +499,12 @@ ul .advantage__blue
 .minus__plus:hover::before,
 .minus__plus:focus::before
 {
-    background-color: #000000;
+    background-color: #000;
 }
 .minus__plus:active::after,
 .minus__plus:active::before
 {
-   background-color: #81b3d2;
+    background-color: #81b3d2;
 }
 
 .form__adults-child
@@ -551,21 +565,27 @@ ul .advantage__blue
 {
     margin-bottom: 55px;
 }
-.google__map {
+.google__map
+{
     background-image: url(../img/map.png);
     background-repeat: no-repeat;
     background-position: 50% 100.2%;
     background-size: 1200px auto;
 }
-
+.google__map iframe
+{
+    width: 100%;
+    height: 593px;
+}
 /*  ----- FOOTER -----  */
-.footer__wrap {
+.footer__wrap
+{
     position: relative;
 }
 .footer
 {
     display: flex;
-    
+
     width: 100%;
     height: 120px;
 
@@ -575,7 +595,8 @@ ul .advantage__blue
     align-items: center;
     flex-wrap: wrap;
 }
-.page__index .footer {
+.page__index .footer
+{
     position: absolute;
     bottom: 0;
 }
@@ -717,33 +738,42 @@ ul .advantage__blue
 }
 .comfort__type li
 {
+    position: relative;
+
     padding-bottom: 24px;
     padding-left: 35px;
-    position: relative;
 }
-.filter__checkbox input[type="checkbox"] + .checkbox__indicator {
-    content: "";
+.filter__checkbox input[type='checkbox'] + .checkbox__indicator
+{
     position: absolute;
-    left: 0px;
-    background-image: url("../img/checkbox_off.svg");
+    left: 0;
+
     width: 23px;
     height: 23px;
+
+    content: '';
+
+    background-image: url('../img/checkbox_off.svg');
 }
-.filter__checkbox input[type="checkbox"]:checked + .checkbox__indicator {
-    content: "";
+.filter__checkbox input[type='checkbox']:checked + .checkbox__indicator
+{
     position: absolute;
-    left: 0px;
-    background-image: url("../img/checkbox_on.svg");
+    left: 0;
+
     width: 25px;
     height: 23px;
+
+    content: '';
+
+    background-image: url('../img/checkbox_on.svg');
 }
-.filter__checkbox input[type="checkbox"]:focus + .checkbox__indicator {
-    box-shadow: 0 0 0 2px rgba(30, 38, 139, 0.5);
-}
-.filter__checkbox input[type="checkbox"]:disabled + .checkbox__indicator
+.filter__checkbox input[type='checkbox']:focus + .checkbox__indicator
 {
-    box-shadow: inset 0 0 0 12px rgba(106, 106, 106, 0.5);
-    color: 
+    box-shadow: 0 0 0 2px rgba(30, 38, 139, .5);
+}
+.filter__checkbox input[type='checkbox']:disabled + .checkbox__indicator
+{
+    box-shadow: inset 0 0 0 12px rgba(106, 106, 106, .5);
 }
 /*       Filter Price        */
 
@@ -859,9 +889,10 @@ ul .advantage__blue
 
 .range-toggle:hover
 {
-    background: #1c4f80;
     width: 5px;
     height: 5px;
+
+    background: #1c4f80;
 }
 
 .range-toggle-min
@@ -971,11 +1002,11 @@ ul .advantage__blue
 {
     color: #81b3d2;
 }
-.sorting__by input[type="radio"]:focus + label
+.sorting__by input[type='radio']:focus + label
 {
-    box-shadow: 0 0 0 2px rgba(129, 179, 210, 0.5)
+    box-shadow: 0 0 0 2px rgba(129, 179, 210, .5);
 }
-.sorting__by input[type="radio"]:checked + label
+.sorting__by input[type='radio']:checked + label
 {
     text-decoration: none;
 
@@ -1018,7 +1049,7 @@ ul .advantage__blue
     min-height: 125px;
     padding-top: 25px;
 
-    border-bottom: 1px solid #e5e5e5;;
+    border-bottom: 1px solid #e5e5e5;
 }
 .hotel__img
 {
