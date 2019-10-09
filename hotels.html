@@ -28,13 +28,13 @@
 <!--Filters section -->       
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <form method="post">
+        <form method="post" id="filter__form">
           <fieldset class="filter__comfort comfort__type">
             <h3>Инфраструктура:</h3>
             <ul class="comfort__list">
               <li>
                 <label class="filter__checkbox" for="pool">
-                <input class="visually-hidden" type="checkbox" id="pool" name="pool"><span class="checkbox__indicator"></span>
+                <input class="visually-hidden" type="checkbox" id="pool" name="pool" checked><span class="checkbox__indicator"></span>
                 Бассейн</label>
               </li>
               <li class="filter__parking">
@@ -52,19 +52,19 @@
             <ul>
               <li>
                 <label class="filter__checkbox" for="hotel">
-                <input class="visually-hidden" type="checkbox" id="hotel" name="hotel">
+                <input class="visually-hidden" type="checkbox" id="hotel" name="hotel" checked>
                 <span class="checkbox__indicator"></span>
                 Гостиница</label>
               </li>
               <li>
                 <label class="filter__checkbox" for="motel">
-                <input class="visually-hidden" type="checkbox" id="motel" name="motel">
+                <input class="visually-hidden" type="checkbox" id="motel" name="motel" checked>
                 <span class="checkbox__indicator"></span>
                 Мотель</label>
               </li>
               <li>
                 <label class="filter__checkbox" for="apartment">
-                <input class="visually-hidden" type="checkbox" id="apartment" name="apartment">
+                <input class="visually-hidden" type="checkbox" id="apartment" name="apartment" checked>
                 <span class="checkbox__indicator"></span>
                 Апартаменты</label>
               </li>
@@ -85,7 +85,7 @@
               <div class="range-toggle range-toggle-min"></div>
               <div class="range-toggle range-toggle-max"></div>
             </div>
-            <button type="submit">Показать</button>
+          <button class="filter__button" form="filter__form" type="submit" formmethod="post" name="filter__button">Показать</button>
           </fieldset>
         </form>      
       </section>
@@ -96,7 +96,7 @@
             <h3 class="sorting__header">Сортировка:</h3>
             <ul class="sorting__by">
               <li>
-                <input class="visually-hidden" type="radio" id="by__price" name="sorting__by" value="by__price"><label for="by__price">По цене</label>
+                <input class="visually-hidden" type="radio" id="by__price" name="sorting__by" value="by__price" checked><label for="by__price">По цене</label>
               </li>
               <li>
                 <input class="visually-hidden" type="radio" id="by__type" name="sorting__by" value="by__type"><label for="by__type">По типу</label>
@@ -134,9 +134,9 @@
               <a href="#" class="hotel__book">Забронировать</a>
               </p>
             </div>
-            <div class="raiting__group">
+            <div class="rating__group">
               <p><img src="img/four_star.png" width="90" height="17" alt="четыре звезды" class="stars"></p>
-              <span class="raiting">Рейтинг: 8,5</span>
+              <span class="rating">Рейтинг: 8,5</span>
             </div>
           </li>
           <li class="hotel">
@@ -151,9 +151,9 @@
               </p>
             </div>
 
-            <div class="raiting__group">
+            <div class="rating__group">
               <p><img src="img/three_star.png" width="65" height="17" alt="три звезды" class="stars"></p>
-              <span class="raiting">Рейтинг: 8,9</span>
+              <span class="rating">Рейтинг: 8,9</span>
             </div>
 
           </li>
@@ -169,9 +169,9 @@
                 <a href="#" class="hotel__book">Забронировать</a>
               </p>
             </div>
-            <div class="raiting__group">
+            <div class="rating__group">
               <p><img src="img/two_star.png" width="41" height="17" alt="две звезды" class="stars"></p>
-              <span class="raiting">Рейтинг: 9,2</span>
+              <span class="rating">Рейтинг: 9,2</span>
             </div>  
           </li>
         </ul>  
